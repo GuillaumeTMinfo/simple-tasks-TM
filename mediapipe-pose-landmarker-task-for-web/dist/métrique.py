@@ -1,6 +1,10 @@
 import math
+import random
+import cv2
+import mediapipe as mp
+from mediapipe.python.solutions.drawing_utils import _normalized_to_pixel_coordinates
 
-print(angle_to_percentage(0))    # Doit afficher 0.0
+print(angle_to_percentage(0))
 
 # angle between two lines with one common point
 def angle(self, point1, point2, point3):
@@ -21,7 +25,7 @@ def angle(self, point1, point2, point3):
         return 90.0
     
 def angle_to_percentage(angle):
-# Convertit un angle en un pourcentage.
+# angle to percentage converter
 
     if angle < 0 or angle > 180:
         raise ValueError("L'angle doit être compris entre 0 et 180 degrés.")
